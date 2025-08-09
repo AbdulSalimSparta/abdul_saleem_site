@@ -1,0 +1,237 @@
+.ProjectItem {
+  position: relative;
+  height: 250px;
+  width: 80%;
+  display: grid;
+
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  
+  background: var(--box-background);
+  border-radius: 5px;
+  border: var(--box-border);
+
+  overflow: visible;
+  transition: transform 0.5s ease-in-out;
+  perspective: 1000px;
+
+  cursor: pointer;
+}
+
+.projectSno {
+  width: 100%;
+  text-align: center;
+  grid-area: 1 / 1 / 3 / 2;
+  align-self: center;
+  opacity: 1;
+  font-family: "Aoi";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.projectTitle {
+  width: 100%;
+  grid-area: 1 / 2 / 2 / 4;
+  align-self: end;
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.projectTitle h1 {
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: -3px;
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.projectTech {
+  width: 100%;
+  grid-area: 2 / 2 / 3 / 4;
+  align-self: start;
+  color: #c2bcbc;
+  transition: transform 0.5s ease-in-out;
+}
+
+.projectTech ul {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+}
+
+.projectImg {
+  margin-top: 15px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 1 / 3 / 3 / 4;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: visible;
+  position: relative;
+  /* To handle the stacking of images */
+}
+
+.projectImg img {
+  position: absolute;
+  object-fit: cover;
+  height: 260px;
+  width: 450px;
+  transition: 0.5s;
+  border-radius: 5px;
+  border: 1px solid rgb(218, 218, 218); /* Common transition for all */
+}
+.projectImg:hover img:nth-child(6) {
+  transform: rotate(-6deg);
+  opacity: 1;
+}
+.projectImg:hover img:nth-child(5) {
+  transform: rotate(-5deg);
+  opacity: 0.9;
+}
+
+.projectImg:hover img:nth-child(4) {
+  transform: rotate(-4deg);
+  opacity: 0.8;
+}
+
+.projectImg:hover img:nth-child(3) {
+  transform: rotate(-3deg);
+  opacity: 0.7;
+}
+
+.projectImg:hover img:nth-child(2) {
+  transform: rotate(-2deg);
+  opacity: 0.6;
+}
+
+.projectImg:hover img:nth-child(1) {
+  transform: rotate(-1deg);
+  opacity: 0.5;
+}
+
+.ProjectItem:hover .projectImg {
+  opacity: 1;
+  transform: scale(0.8);
+}
+
+.projectTimeline {
+  width: 100%;
+  align-self: center;
+  grid-area: 1 / 4 / 3 / 5;
+  text-align: center;
+  h1 {
+    font-size: 12px;
+  }
+}
+
+/* Hover Effects */
+.ProjectItem:hover .projectSno {
+  opacity: 0;
+}
+
+.ProjectItem:hover .projectTitle {
+  transform: translateX(-30px);
+}
+
+.ProjectItem:hover .projectTech {
+  transform: translateX(-30px);
+}
+
+.ProjectItem:hover .projectImg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ProjectItem {
+  animation: scrolling ease;
+  animation-timeline: view();
+  animation-range: entry 10%;
+}
+
+@keyframes scrolling {
+  from {
+    opacity: 0;
+    scale: 0.95;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 961px) {
+  .ProjectItem {
+    height: max-content;
+    width: 90%;
+    padding: 40px 40px 10px 40px;
+    grid-template-columns: 1fr 1fr; /* 4 columns */
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr; /* 4 rows */
+    grid-auto-rows: 0; /* prevents implicit rows */
+    grid-auto-columns: 0;
+    grid-template-areas:
+      " img    img "
+      " sno    timeline"
+      " title   title"
+      " tech    tech";
+  }
+
+  .projectSno {
+    grid-area: sno;
+    text-align: left;
+    align-self: last baseline;
+  }
+
+  .projectTitle {
+    grid-area: title;
+  }
+  .projectTitle h1 {
+    font-size: 36px;
+    margin: 2px;
+  }
+  .projectTech {
+    grid-area: tech;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+  .projectTimeline {
+    text-align: right;
+    align-self: last baseline;
+    grid-area: timeline;
+  }
+  .projectImg {
+    width: 100%;
+    grid-area: img;
+    transform: scale(1);
+    transition: none;
+    opacity: 100;
+    height: 30vh;
+    
+  }
+
+  .projectImg > img{
+    width: 80vw;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Hover Effects */
+  .ProjectItem:hover .projectSno {
+    opacity: 100;
+  }
+
+  .ProjectItem:hover .projectTitle {
+    transform: translateX(0px);
+  }
+
+  .ProjectItem:hover .projectTech {
+    transform: translateX(0px);
+  }
+
+  .ProjectItem:hover .projectImg {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,67 @@
+.testimonalcontainer{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.testimonalcardcontainer{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+  padding: 0 40px;
+}
+
+
+.paginationbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 600px;
+}
+
+/* .pagination::before{
+  content:'';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: grey;
+  border-radius: 100%;
+  left: -7.5%;
+}
+
+.pagination::after{
+  content:'';
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: grey;
+  border-radius: 100%;
+  right: -5%;
+} */
+
+
+
+
+.pagination > span{
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  
+  background-color:var(--myblue);
+  border-radius: 100%;
+  left:10%;
+}
+
+.pagination{
+  height: 2px;
+  width: 400px;
+  background-color: grey;
+  
+  position: relative;
+}

@@ -1,0 +1,101 @@
+.Boxcontainer {
+  margin: 15px;
+  height: max-content;
+  width: max-content;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.boxHead {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+  width: 100%;
+  height: max-content;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.boxHead > h5 {
+  font-family: "Aoi";
+  padding: 5px;
+  margin-left: 10px;
+  font-size: small;
+  font-weight: 350;
+}
+
+.listBox {
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.listBox > svg {
+  margin: 2px;
+}
+
+.boxBody {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 350px;
+  width: 600px;
+}
+
+.testiomalcommentbox{
+  margin: 10px;
+  height: 100%;
+}
+
+
+.testiomalcomment{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.testimonaluserinfo{
+  align-self: flex-start;
+  margin: 10px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.testimonaluserbiobox{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+.testimonaluserprofile{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+  border: 1px solid var(--myblue);
+  margin: 0px 10px;
+}
+
+.testimonalusername{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.testimonaluserextrainfo{
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 200;
+}
+

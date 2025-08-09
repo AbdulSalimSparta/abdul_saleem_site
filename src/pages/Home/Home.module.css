@@ -1,0 +1,147 @@
+.home {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 85vh;
+  position: relative;
+}
+
+.container {
+  margin: auto 0;
+  display: block;
+}
+
+.HeroTxt,
+.creative {
+  font-size: var(--hero-text-des);
+  line-height: 80px;
+  letter-spacing:var(--letter-spacing);
+}
+
+
+.HeroTxt *,
+.creative *{
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing:inherit;
+}
+
+.creative {
+  color: var(--myblue);
+}
+.creative *{
+  color: inherit;
+}
+
+.HeroSub {
+  margin: 20px 0px;
+  font-size: 1.3rem;
+  color: #6d6d6d;
+  font-family: "Made";
+}
+
+.ScrollBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  height: min-content;
+}
+
+.datetimebox,
+.socialbox {
+  width: 300px;
+  display: flex;
+}
+
+.datetimebox {
+  justify-content: center;
+}
+
+.socialbox {
+  width: 300px;
+  display: flex;
+  justify-content: end;
+}
+
+.scrolltext {
+  color: #6d6d6d;
+  position: relative;
+  align-self: center;
+   &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    border-radius: 100%;
+    width: 1px; 
+    height: 10px; 
+    background-color: var(--myblue);
+    transform: translate(-50%, 20px);  
+    animation: swipefloating 5s infinite;
+  }
+}
+
+@keyframes swipefloating {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, 10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -10px);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, 10px);
+  }
+}
+
+.verticalline {
+  border-left: 0.6px solid var(--myblue);
+  height: 30px;
+  cursor: pointer;
+  animation-name: down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@media (max-width: 961px) {
+  .HeroTxt,
+  .creative {
+    font-size: 5rem;
+    line-height: 60px;
+    letter-spacing: -3px;
+  }
+  .HeroSub {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  .home {
+    height: 80vh;
+  }
+
+
+.datetimebox,
+.socialbox {
+  transform: scale(0);
+  }
+}
+

@@ -1,0 +1,211 @@
+.name {
+  font-size: 7rem;
+  font-family: "Made";
+  margin: 20px 0;
+  text-align: center;
+}
+
+.mainContent {
+  height: max-content;
+  width: 80vw;
+  margin: 40px 10vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "imageCol contentCol";
+}
+.imageCol {
+  grid-area: imageCol;
+  background-image: url("../../images/IMG_1546.JPG"); /* Replace with actual image path */
+  min-height: 600px;
+  height: 115vh;            /* keeps it full-viewport tall */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 12px;
+  will-change: transform;
+  transform: translateZ(0); 
+  
+}
+.contentCol {
+  grid-area: contentCol;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  color: var(--text-color-primary);
+  font-size: 1.2rem; /* Adjust as needed */
+  font-family: "Made";
+}
+.contentCol * {
+  font-family: "Made";
+}
+
+.contentCol h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: var(--myblue);
+  }
+
+
+
+}
+
+.contentCol p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+.contentCol strong {
+  color: #ffffff;
+}
+
+.contentCol ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detailssection {
+  height: max-content;
+  width: 80vw;
+  margin: 40px 10vw;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "awards"
+    "achivements"
+    "courses"
+    "internships";
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: "Made";
+}
+
+.awards {
+  grid-area: awards;
+}
+
+.achivements {
+  grid-area: achivements;
+}
+
+.courses {
+  grid-area: courses;
+}
+
+.internships {
+  grid-area: internships;
+}
+
+.verticalTimeline {
+  position: relative;
+  margin: 10px 0;
+  padding-left: 13px; /* space for arrows */
+}
+
+.verticalTimeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: var(--myblue); /* green vertical line */
+}
+
+.timelineItem {
+  position: relative;
+  margin: 10px 0;
+}
+
+.circle {
+  position: absolute;
+  left: -2px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--myblue);
+  background: black; /* green arrow */
+}
+
+.timelineItem p {
+  padding-left: 20px;
+  margin-bottom: 1px;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Optional: smooth fade-in animation */
+.timelineItem {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.timelineItem:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.timelineItem:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.timelineItem:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: stack items vertically on smaller screens */
+@media (max-width: 992px) {
+  .mainContent {
+    margin: 0% 5vw;
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "imageCol"
+      "contentCol";
+  }
+  .imageCol {
+    height: 600px;
+    width: 100%; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .detailssection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "awards"
+      "achivements"
+      "courses"
+      "internships";
+  }
+}

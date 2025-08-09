@@ -1,0 +1,29 @@
+.box{
+    width:100%;
+    height: auto;
+    background: var(--box-background);
+    box-shadow: var(--box-box-shadow);
+    border: var(--box-border);
+    padding: 0px 10px; 
+
+    h1{
+        font-size: 3rem;
+        font-family: "Made";
+        font-weight: 800;
+        padding: 10px;
+    }
+
+    h1 *{
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+@media (max-width: 961px) {
+    .box{
+        h1{
+            font-size: 2rem;
+        }
+    }
+}

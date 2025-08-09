@@ -1,0 +1,145 @@
+.abt {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abtmain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.line,
+.line {
+  display: block;
+  overflow: hidden; 
+  will-change: transform; 
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myimg {
+  height: 600px;
+  width: 400px;
+  background-image: url("../../images/abdul_saleem.jpg");
+  background-size: 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  filter: grayscale(100%);
+  border-radius: var(--box-border-radius);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  will-change: background-position;
+ 
+}
+
+
+.myname {
+  font-family: "Kawur" !important;
+  position: absolute;
+  top: 60%;
+  font-size: clamp(8rem, 16vw, 19rem);
+
+  font-weight: 800;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.myname * {
+  font-family: inherit;
+  position: inherit;
+  top: inherit;
+  font-size: inherit;
+
+  font-weight: inherit;
+  white-space: inherit;
+  pointer-events: inherit;
+}
+
+.details {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Role {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Made";
+}
+
+.Role *{
+  font-size:inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.compactbtnbox {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.abtdescription {
+  font-size: 16px;
+  text-align: left;
+  font-family: "Made";
+}
+
+.abtdescription * {
+  font-size: inherit;
+  font-family: inherit;
+  text-align: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 961px) {
+  .myimg {
+   width: 100%;
+    height: 400px;      /* fixed height instead of auto */
+    background-attachment: scroll;
+  }
+
+  .myname {
+    position: static; /* name comes below image */
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: -30px;
+    white-space: nowrap;
+  }
+
+  .details {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Role {
+    margin: 10px;
+    font-weight: 300;
+  }
+
+  .abtdescription {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 300;
+    margin: 20px 0px;
+  }
+}

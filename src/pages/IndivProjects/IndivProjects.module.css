@@ -1,0 +1,155 @@
+.Notfound {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+.projhero {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projindi {
+  font-size: 12px;
+  color: gray;
+  font-weight: 400;
+}
+.projectname {
+  font-size: var(--hero-text-des);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 400;
+  margin-top: 10px;
+}
+.herocentercontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectbImg {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectbImg img {
+  border: var(--box-border);
+  width: 740px;
+  height: 470px;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.projectDetailsBox {
+  margin: 40px 10vw;
+  width: 80vw;
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas:
+    "description_title project_tech_title"
+    "description_text      project_tech"
+    "project_timeline      project_tech"
+    "project_timeline_text project_tech"
+    "project_links project_links";
+}
+
+.projectbImg img:hover {
+  background-size: 200%;
+}
+
+.proDescription {
+  grid-area: description_title;
+}
+
+.proDescriptionText {
+  grid-area: description_text;
+  background: var(--box-background);
+  border: var(--box-border);
+  padding: 10px;
+  p {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.projectTechtitle {
+  grid-area: project_tech_title;
+}
+
+.projectTechver {
+  grid-area: project_tech;
+}
+
+.projecttimeline {
+  grid-area: project_timeline;
+}
+
+.projecttimelineText {
+  padding: 20px;
+  grid-area: project_timeline_text;
+  background: var(--box-background);
+  border: var(--box-border);
+  p {
+    font-size: 16px;
+  }
+}
+.projectLinks {
+  grid-area: project_links;
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.nextProject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+@media (max-width: 961px) {
+  .projectname {
+    font-size: var(--hero-text-mob);
+  }
+
+  .projectbImg img {
+    
+    width: 80vw;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .projectDetailsBox {
+    margin: 20px 10vw;
+    width: 80vw;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "description_title"
+      "description_text"
+      "project_tech_title"
+      "project_tech"
+      "project_timeline"
+      "project_timeline_text"
+      "project_links";
+  }
+
+  .proDescriptionText {
+    padding: 20px;
+    p {
+      font-size: 15px;
+    }
+  }
+}

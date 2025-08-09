@@ -1,0 +1,172 @@
+.footer {
+  background: var(--box-background); /* your preferred bg */
+  color: #eee;
+  overflow: hidden;
+}
+
+.as {
+  color: white;
+  fill: white;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "logo logo logo logo home"
+    "logo logo logo logo about"
+    "logo logo logo logo project"
+    " contacts  socials others others skills";
+
+  & > * {
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    min-height: 100px;
+  }
+}
+
+/* area mapping */
+.logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home {
+  grid-area: home;
+}
+.about {
+  grid-area: about;
+}
+.projects {
+  grid-area: project;
+}
+.skills {
+  grid-area: skills;
+}
+.socials {
+  grid-area: socials;
+}
+.contacts {
+  grid-area: contacts;
+}
+.others {
+  grid-area: others;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* optional: style items */
+
+.socials,
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+     position: relative;
+}
+
+.contacts > a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    gap: 10px;
+    h1{
+      font-size: 20px;
+      font-family: "Made";
+      text-align: left;
+
+      &::after {
+        content: "→";
+        display: inline-block;
+        transform: rotate(90deg);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+    }
+  }
+
+.contacts:hover {
+  background: rgba(var(--myblue-rgb), 0.1);
+  transition: all 0.3s ease-in-out;
+  h1::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.home,
+.about,
+.projects,
+.skills {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  min-height: 100px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+
+    display: flex;
+    gap: 10px;
+    h1,
+    span {
+      font-size: 20px;
+      font-family: "Made";
+      text-align: left;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+    }
+  }
+}
+
+.home:hover,
+.about:hover,
+.projects:hover,
+.skills:hover {
+  background: rgba(var(--myblue-rgb), 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "home about"
+      "project skills"
+      "contacts contacts"
+      "socials socials"
+      "others others";
+  }
+
+  .home,
+  .about,
+  .projects,
+  .skills {
+    justify-content: center;
+  }
+}

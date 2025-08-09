@@ -1,0 +1,92 @@
+
+.Boxcontainer {
+  position: relative;
+  margin: 15px;
+  height: max-content;
+  width: 80%;
+  background: var(--box-background);
+  border-radius: var(--box-border-radius);
+  box-shadow: var(--box-box-shadow);
+  border: var(--box-border);
+}
+
+.boxHead {
+  display: flex;
+  border-bottom:var(--box-border);
+  width: 100%;
+  height: max-content;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.boxHead > h5{
+  font-family: "Aoi";
+    padding: 5px;
+    margin-left: 10px;
+    font-size: small;
+    font-weight: 350;
+}
+
+.listBox {
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.listBox > svg{
+    margin: 2px;
+}
+
+.skillboxBody{
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.individaulskillbox{
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  list-style: none;
+  animation: scrolling cubic-bezier(.28,.01,.28,.01);
+  animation-timeline: view();
+  animation-range: entry 10% cover 10%;
+
+}
+
+.skillsicon{
+  background-size: cover;
+  
+}
+
+
+@keyframes scrolling{
+
+    from{
+        scale: 0.5;
+
+    }
+    to{
+        scale:1;
+    }
+    
+}
+
+@media (max-width: 961px) {
+  
+
+  .individaulskillbox > h2{
+    font-size: 15px;
+  }
+}

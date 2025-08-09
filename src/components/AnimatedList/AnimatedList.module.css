@@ -1,0 +1,70 @@
+.ListLine{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    height:max-content;
+    width:100%;
+    background: var(--box-background);
+    box-shadow: var(--box-box-shadow);
+    border: var(--box-border);
+    padding: 10px 20px; 
+    transition: all .2s ease-in-out;
+    overflow: visible;
+    cursor: pointer;
+     transform-origin: center;
+    span{
+        font-size: large;
+        z-index: 1;
+        font-family: "Made";
+        transition: all .3s ease-in-out;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        inset: 0%;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: all .3s ease-in-out;
+        z-index: 0;
+    }
+
+    .value::before{   
+        content: '↗ ';
+        font-size: 0;
+        z-index: 1;
+        letter-spacing: normal;
+        transition: all .3s ease-in-out;
+    }
+}
+
+
+.ListLine:hover{
+    color:black;
+    .value::before{  
+        font-size: large;
+    }
+
+    &::after{
+        transform: scaleY(1);
+    }
+    .icon{
+        opacity: 1;
+    }
+}
+
+.icon{
+   position: absolute;
+  height: 200px;
+  width: 260px;
+  object-fit: cover;
+  border-radius: var(--box-border-radius);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}

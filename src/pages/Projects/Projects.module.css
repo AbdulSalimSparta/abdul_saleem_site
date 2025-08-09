@@ -1,0 +1,32 @@
+.projectBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+}
+.container{
+    display: flex;
+    height: max-content;
+
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+@keyframes scroll {
+    0%{
+        opacity: 0;
+        filter: blur(4px);
+        transform: scale(0.90);
+    }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}

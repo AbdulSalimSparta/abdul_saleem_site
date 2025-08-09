@@ -1,0 +1,56 @@
+.hiremebtn{
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    width: max-content;
+    height: 50px;
+    padding: 15px 20px;
+    color: var(--text-color-primary);
+    background: var(--box-background);
+    border-radius: var(--button-border-radius);
+    box-shadow: var(--box-box-shadow);
+    border: var(--box-border);
+    transform-origin: center;
+}
+
+
+.flipbtn{
+    position: relative;
+    overflow: clip;
+    transition: border .3s ease;
+
+    &::before{
+        content: attr(data-button-text);
+        background-color: rgba(var(--myblue-rgb), 0.1);
+        color: var(--myblue);
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items:center;
+        translate: 0% 200%;
+        transition: translate .3s ease;
+    }
+
+
+    span{
+        display: block;
+        transition: translate .3s ease;
+    }
+
+    &:hover{
+
+        &{
+            border: 1px solid var(--myblue);
+        }
+
+
+        span{
+            translate: 0% -200%;
+        }
+
+        &::before{
+            translate: 0% 0%;
+        }
+    }
+}
+

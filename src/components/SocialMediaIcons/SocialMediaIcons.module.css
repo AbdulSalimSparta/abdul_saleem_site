@@ -1,0 +1,40 @@
+.socialcontainer{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+
+    /* transform-style: preserve-3d;
+    transform: perspective(1000px); */
+    
+}
+
+.sociallinks{
+    font-size: 20px;
+}
+
+/* .sociallinks{
+    font-size: 25px;
+    transition: transform .3s ease-in-out;
+    position: relative;
+}
+
+
+.sociallinks:hover{
+    transform: translateZ(200px);
+}
+
+.sociallinks:hover + *{
+    transform: translateZ(90px);
+}
+
+.sociallinks:hover + * + *{
+    transform: translateZ(50px) ;
+}
+
+.sociallinks:has(+ *:hover) {
+    transform: translateZ(90px) ;
+}
+
+.sociallinks:has(+ * + *:hover) {
+    transform: translateZ(50px);
+} */
