@@ -1,6 +1,7 @@
 import style from "./Projects.module.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import projects from "../../Data/projects";
+import Animate from "../../components/Animate";
 function Projects() {
 
   const handleCardClick = (id) => {
@@ -10,9 +11,11 @@ function Projects() {
   return (
     <section id="projects" >
       <div className={style.container}>
-      <h1 className="SectionTitleMain">
+      <Animate mode="words">
+      <header className="SectionTitleMain">
         My <span>Projects</span>
-      </h1>
+      </header>
+      </Animate>
       <div className={style.projectBox}>
         {projects.map((project) => {
           return (

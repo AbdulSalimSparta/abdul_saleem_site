@@ -5,6 +5,7 @@ import AnimatedList from "../../components/AnimatedList/AnimatedList";
 import { useParams } from "react-router-dom";
 import TitleBox from "../../components/TitleBox/TitleBox";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import Animate from "../../components/Animate";
 
 function IndivProjects() {
   const { id } = useParams();
@@ -24,16 +25,16 @@ function IndivProjects() {
       <section id="projecthero">
         <div className={style.projhero}>
           <div className={style.herocentercontent}>
-            <h5 className={style.projindi}>Project Name</h5>
-            <h1 className={style.projectname}>{project.title}</h1>
+            
+              <h5 className={style.projindi}>Project Name</h5>
+            <Animate mode="words">
+              <h1 className={style.projectname}>{project.title}</h1>
+            </Animate>
           </div>
         </div>
 
         <div className={style.projectbImg}>
-          <img
-            src={project.image}
-            alt={`Project ${project.title}`}
-          />
+          <img src={project.image} alt={`Project ${project.title}`} />
         </div>
 
         <div className={style.projectDetailsBox}>
@@ -41,9 +42,7 @@ function IndivProjects() {
             <TitleBox title="Project Description" />
           </div>
           <div className={style.proDescriptionText}>
-            <p>
-              {project.description}
-            </p>
+            <p>{project.description}</p>
           </div>
 
           <div className={style.projecttimeline}>

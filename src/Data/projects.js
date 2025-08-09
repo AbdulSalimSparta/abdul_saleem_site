@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     sno: "01",
-    title: "F2C-Smart",
+    title: "F2C-Smart ",
     tech: ["React JS", "Node JS", "Express JS", "PostgreSQL", "Bootstrap"],
     image: require("../images/F2C.png"),
     timeline:"2024",
@@ -13,7 +13,7 @@ const projects = [
   {
     id: 2,
     sno: "02",
-    title: "Saleem's Portfolio",
+    title: "Saleem's Portfolio ",
     tech: ["React JS", "Node JS", "Gsap", "JavaScript", "Git", "Vercel"],
     image: require("../images/portfolio.png"),
     duration: "July-2025",
@@ -24,7 +24,7 @@ const projects = [
   {
     id: 3,
     sno: "03",
-    title: "Scheduling App",
+    title: "Scheduling App ",
     tech: ["React JS", "Node JS", "Express JS", "PostgreSQL", "Git"],
     image: require("../images/SchedulingAPP.png"),
     timeline:"2024",
@@ -35,7 +35,7 @@ const projects = [
   {
     id: 4,
     sno: "04",
-    title: "StudioARKH'ives",
+    title: "StudioARKH'ives ",
     tech: ["Wix Editor", "Wix Studio", "Wix CMS"],
     image: require("../images/STudioAr.png"),
     timeline:"2024",

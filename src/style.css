@@ -99,14 +99,6 @@ body{
 }
 
 
-@keyframes float {
-  0%, 100% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(30px, -40px);
-  }
-}
 
 
 
@@ -134,23 +126,6 @@ body{
     margin: 40px 0;
     letter-spacing: -2px;
   }
-
-  animation: scroll cubic-bezier(0.11, 0, 0.5, 0);
-  animation-timeline: view();
-  animation-range: entry 0%;
 }
 
-
-@keyframes scroll {
-    0%{
-        opacity: 0;
-        filter: blur(4px);
-        transform: scale(0.90);
-    }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1);
-  }
-}
 

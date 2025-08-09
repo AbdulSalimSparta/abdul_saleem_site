@@ -1,6 +1,7 @@
 import style from "./NavLinks.module.css";
 import navLinks from "../../Data/general";
 import { useLocation, useNavigate } from "react-router-dom";
+import Animate from "../Animate";
 
 function NavLinks() {
   const location = useLocation();
@@ -29,9 +30,11 @@ function NavLinks() {
     <ul className={style.list}>
       {navLinks.map((link) => (
         <li key={link.id}>
+          <Animate>
           <a href={`#${link.id}`} onClick={(e) => handleClick(e, link.id)}>
             {link.title}
           </a>
+          </Animate>
         </li>
       ))}
     </ul>

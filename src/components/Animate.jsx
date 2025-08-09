@@ -37,9 +37,10 @@ function Animate({
       elements.forEach((element) => {
         const split = new SplitText(element, {
           type: mode, // Dynamic mode
-          linesClass: "split-line",
-          wordsClass: "split-word",
-          charsClass: "split-char"
+          // linesClass: "split-line",
+          // wordsClass: "split-word",
+          // charsClass: "split-char",
+          mask: mode
         });
 
         splitRef.current.push(split);

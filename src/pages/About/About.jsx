@@ -30,9 +30,11 @@ function About() {
 
   return (
     <div id="about" className={style.abt}>
-      <h1 className="SectionTitleMain">
+      <Animate mode="words">
+      <header className="SectionTitleMain">
         About <span>Me</span>
-      </h1>
+      </header>
+      </Animate>
 
       <div className={style.abtmain}>
         {/* Left Details */}
@@ -51,7 +53,7 @@ function About() {
               alt="Abdul Saleem"
             />
           </div>
-          <Animate>
+          <Animate mode="words">
             <h1 id="name" className={style.myname}>
               Abdul Saleem
             </h1>

@@ -1,10 +1,8 @@
 import React from "react";
 import style from "./Home.module.css";
-import Header from "../../components/Header/Header";
 import FlipButton from "../../components/FlipButton/FlipButton";
 import useDate from "../../components/useDate";
 import SocialMediaIcons from "../../components/SocialMediaIcons/SocialMediaIcons";
-import { useLocation, Link } from 'react-router-dom';
 import Animate from "../../components/Animate";
 
 function Home() {
@@ -22,11 +20,12 @@ function Home() {
             </span>{" "}
             developer
           </p>
-          </Animate>
+          
           <p className={style.HeroSub}>
             I bring value to web development projects by merging
             <br /> technical expertise with creativity and aesthetics.
           </p>
+          </Animate>
           <FlipButton
             label="Let's Work Together"
             url="mailto:abdulsalim232004@gmail.com"

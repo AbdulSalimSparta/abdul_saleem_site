@@ -35,11 +35,19 @@ export const profileData = {
   internships: [
     {
       company: "Anna University Guindy - Centre for Entrepreneurship Development (CED)",
-      duration: "1 Month",
+      duration: "July 2024 - August 2024",
       role: "Full Stack Web Development Intern",
       project: "Resource Scheduling Web App for CED Makers Lab",
       tech_stack: ["PERN Stack (PostgreSQL, Express.js, React.js, Node.js)"]
-    }
+    },
+    {
+      company: "NLC India Limited",
+      duration: "June 2022 - July 2022",
+      role: "Software Developer Intern, NLC India Limited",
+      project: "Web Based IT Infrastructure Management",
+      tech_stack: ["HTML", "CSS", "JavaScript", "MySQL"],
+      description: "Gained exposure to enterprise IT infrastructure and management processes."
+  }
   ],
   freelance_experience: [
     {
@@ -52,7 +60,7 @@ export const profileData = {
         "Tested mobile and web applications across various domains, ensuring quality through detailed bug reports and usability feedback."
     }
   ],
-  hobbies: ["Exploring Awaaards Site", "Playing Hitman Franchise", "Reading History Books"],
+  hobbies: ["Playing Hitman Franchise",],
   summary:
     "I am a passionate Computer Science and Engineering graduate with a strong foundation in full-stack web development and quality assurance testing. I merge technical expertise with entrepreneurial vision to create platforms that empower farmers and promote sustainable agriculture. My journey includes leadership roles, competitive startup events, and freelance testing experience, showcasing my ability to adapt, innovate, and deliver user-focused solutions."
 };
@@ -160,6 +168,6 @@ export const courses = [
     title: "Java",
     platform: "Nptel",
     image:"https://media.licdn.com/dms/image/v2/D4E2DAQFqr9pqO0dWMg/profile-treasury-image-shrink_800_800/B4EZeLavCKHsAg-/0/1750390733804?e=1754755200&v=beta&t=P3Zduuqqj7Ejk_teVRPYWYhEtbBZK44Bru_pNkvFIwI"
-
   },
 ];
+

@@ -1,15 +1,18 @@
 import style from "./ProjectCard.module.css";
 import List from "../List/List";
+import Animate from "../Animate";
 
 function ProjectCard(props) {
   return (
     <>
       <div className={style.ProjectItem} onClick={props.onClick}>
         <div className={style.projectSno}>
-          <h6>{props.sno}</h6>
+          <h3>{props.sno}</h3>
         </div>
         <div className={style.projectTitle}>
+          <Animate mode="words">
           <h1>{props.title}</h1>
+          </Animate>
         </div>
         <div className={style.projectTech}>
           <ul>
@@ -24,7 +27,7 @@ function ProjectCard(props) {
           ))}
         </div>
         <div className={style.projectTimeline}>
-          <h1>{props.timeline}</h1>
+          <h3>{props.timeline}</h3>
         </div>
       </div>
     </>

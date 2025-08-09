@@ -24,8 +24,10 @@
   grid-area: 1 / 1 / 3 / 2;
   align-self: center;
   opacity: 1;
-  font-family: "Aoi";
   transition: opacity 0.3s ease-in-out;
+  h3{
+    font-family: "Made";
+  }
 }
 
 .projectTitle {
@@ -122,8 +124,8 @@
   align-self: center;
   grid-area: 1 / 4 / 3 / 5;
   text-align: center;
-  h1 {
-    font-size: 12px;
+  h3{
+    font-family: "Made";
   }
 }
 

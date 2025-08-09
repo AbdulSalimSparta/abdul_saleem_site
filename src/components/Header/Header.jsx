@@ -6,7 +6,7 @@ function Header() {
 
 
   return (
-    <header id="home" className={styles.header}>
+    <nav id="home" className={styles.header}>
       <Link to="/">
         <svg
             className={styles.as}
@@ -23,7 +23,7 @@ function Header() {
       </Link>
 
       <NavLinks />
-    </header>
+    </nav>
   );
 }
 

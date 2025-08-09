@@ -6,6 +6,7 @@ import { profileData } from "../../Data/aboutMe";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Animate from "../../components/Animate";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,10 +47,14 @@ useGSAP(() => {
 
   return (
     <section className={style.DetailSection}>
+      <Animate mode="words">
       <h1 className={style.name}>Abdul Saleem</h1>
+      </Animate>
 
       <div className={style.mainContent}>
-        <div id="salimimages" className={style.imageCol}></div>
+        <div id="salimimages" className={style.imageCol}>
+          <img src={require("../../images/IMG_1546_e.jpg")}/>
+        </div>
         <div className={style.contentCol}>
           <p>
             Hi, I’m <strong>{profileData.name}</strong>, a {profileData.age}
@@ -165,20 +170,6 @@ useGSAP(() => {
                 value={item.title}
                 date={item.date}
                 image={item.image}
-              />
-            ))}
-          </ul>
-        </div>
-
-        <div className={style.internships}>
-          <TitleBox title="Internships" />
-          <ul>
-            {internships.map((item, index) => (
-              <AnimatedList
-                key={index}
-                value={item.title}
-                date={item.duration}
-                image="https://media.licdn.com/dms/image/v2/D5622AQHXiysqOBwxvQ/feedshare-shrink_2048_1536/B56ZbKVVKlGoAs-/0/1747151312526?e=1756944000&v=beta&t=Z54Kyl12A675BHu2NLZIutyqsugw_AgkocYuHfAljNg"
               />
             ))}
           </ul>
