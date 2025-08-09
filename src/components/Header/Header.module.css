@@ -10,27 +10,9 @@
 
 
 .as {
-    fill: transparent;
-    stroke: #7d7d7d;
-    stroke-width: 0.1;
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    animation: textAnimation 2s ease-in-out 1 forwards;
-    transition: transform .3s ease-in;
+    fill: white;
+    transition: all .3s ease-in;
     transform: scale(0.95);
-}
-
-@keyframes textAnimation {
-    0%{
-        stroke-dashoffset: 50;
-    }
-    80%{
-        fill: transparent;
-    }
-    100%{
-        fill: #7d7d7d;
-        stroke-dashoffset: 0;
-    }
 }
 
 .as:hover {

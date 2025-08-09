@@ -16,7 +16,7 @@
 }
 .imageCol {
   grid-area: imageCol;
-  background-image: url("../../images/IMG_1546.JPG"); /* Replace with actual image path */
+  background-image: url("../../images/IMG_1546.jpg"); /* Replace with actual image path */
   min-height: 600px;
   height: 115vh;            /* keeps it full-viewport tall */
   background-size: cover;
