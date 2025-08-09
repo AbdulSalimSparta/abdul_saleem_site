@@ -1,4 +1,3 @@
-
 import style from "./About.module.css";
 import FlipButton from "../../components/FlipButton/FlipButton";
 import Indicator from "../../components/Indicator/Indicator";
@@ -8,19 +7,25 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-// this is image parallax effect gsap code
+
 function About() {
   useGSAP(() => {
-    gsap.to("#salimimage", {
-      backgroundPosition: "center 10%",
+    const tween = gsap.to("#salimimage img", {
+      yPercent: -20,
       ease: "none",
       scrollTrigger: {
         trigger: "#salimimage",
         start: "top bottom",
         end: "bottom top",
-        scrub: 1
+        scrub: true,
+        invalidateOnRefresh: true
       }
-});
+    });
+
+    return () => {
+      tween.kill();
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
   }, []);
 
   return (
@@ -30,19 +35,22 @@ function About() {
       </h1>
 
       <div className={style.abtmain}>
+        {/* Left Details */}
         <div className={style.details}>
           <Indicator message="Seeking full-time roles" />
           <Animate>
-          <h1 className={style.Role}>A Web Developer based in India</h1>
+            <h1 className={style.Role}>A Web Developer based in India</h1>
           </Animate>
         </div>
 
+        {/* Parallax Image */}
         <div className={style.imgWrapper}>
-          <div
-            id="salimimage"
-            className={style.myimg}
-            // image is given in css
-          />
+          <div id="salimimage" className={style.myimg}>
+            <img
+              src={require("../../images/abdul_saleem.jpg")}
+              alt="Abdul Saleem"
+            />
+          </div>
           <Animate>
             <h1 id="name" className={style.myname}>
               Abdul Saleem
@@ -50,6 +58,7 @@ function About() {
           </Animate>
         </div>
 
+        {/* Right Details */}
         <div className={style.details}>
           <div className={style.compactbtnbox}>
             <FlipButton
@@ -59,16 +68,17 @@ function About() {
           </div>
           <Animate>
             <p id="name" className={style.abtdescription}>
-              I’m Abdul Saleem T.A., a full‑stack developer who transforms
-              real‑world ideas into clean, scalable web applications. I focus on
-              building user‑friendly, responsive interfaces backed by reliable
+              I’m Abdul Saleem T.A., a full-stack developer who transforms
+              real-world ideas into clean, scalable web applications. I focus on
+              building user-friendly, responsive interfaces backed by reliable
               backend systems — turning vision into working products.
             </p>
           </Animate>
         </div>
       </div>
-      <div className="btnbox">
-        <FlipButton label="Who I am ?" url={"Details"}/>
+
+      <div className={style.btnbox}>
+        <FlipButton label="Who I am ?" url={"Details"} />
       </div>
     </div>
   );

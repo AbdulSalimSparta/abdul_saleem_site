@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, /*useLocation*/ } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import IndivProjects from "./pages/IndivProjects/IndivProjects";
 import "./style.css";
 import Header from "./components/Header/Header";
 import MainPage from "./MainPage";
-import { useEffect, useState } from "react";
 import LenisManager from "./components/LenisManager";
-import Preloader from "./components/PreLoader/PreLoader";
 import Details from "./pages/Details/Details";
 
+// import Preloader from "./components/PreLoader/PreLoader";
+// import { useEffect, useState } from "react";
 function AppContent() {
   // const location = useLocation();
   // const [loading, setLoading] = useState(location.pathname === "/");

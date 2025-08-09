@@ -50,7 +50,7 @@ function IndivProjects() {
             <TitleBox title="Project Timeline" />
           </div>
           <div className={style.projecttimelineText}>
-            <p>{project.timeline}</p>
+            <p>{project.duration}</p>
           </div>
 
           <div className={style.projectTechtitle}>
