@@ -37,7 +37,7 @@ const projects = [
     sno: "04",
     title: "StudioARKH'ives ",
     tech: ["Wix Editor", "Wix Studio", "Wix CMS"],
-    image: require("../images/STudioAr.png"),
+    image: require("../images/studiodesk.png"),
     timeline:"2024",
     duration: "September -2024",
     description:

@@ -5,15 +5,15 @@ import Animate from "../../components/Animate";
 
 function Skills(){
     return(<>
-    <div id="skills" className={style.skillscontainer}>
+    <section id="skills" className={style.skillscontainer}>
       <Animate mode="words">
-        <header className="SectionTitleMain">What <span>I Know</span></header>
+        <header className="SectionTitleMain">Skills <span>& Expertise</span></header>
       </Animate>
         <WinSkillsBox
           title={"Key Skills & Tools"}
           skills={skillsData}
         />
-    </div>
+    </section>
     </>);
 }
 

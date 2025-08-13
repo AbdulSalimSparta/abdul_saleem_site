@@ -139,7 +139,7 @@ export const achievements = [
     title: "1st & 2nd Place in Codathon by MAMSE, Trichy",
     date: "Nov 2022, Oct 2023",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7172600695492214784/",
-    image:"https://media.licdn.com/dms/image/v2/D562DAQFaWaC5Z7QNRQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1688214961808?e=1754744400&v=beta&t=ET8cTeKJ8ZDczWyGIclKnOa9XrdAtU6A5Ha-kB-SIuc"
+    image:"https://media.licdn.com/dms/image/v2/D562DAQFaWaC5Z7QNRQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1688214961808?e=1755694800&v=beta&t=dwuDl9LBHF_xj3ZUhjEYolpSu9-YFIWUD0Og67QDTzU"
   }
 ];
 
@@ -160,14 +160,19 @@ export const awards = [
 
 export const courses = [
   {
-    title: "PERN Stack",  //Full Stack Web Development (React, Node, Express, PostgreSQL)
+    title: "Responsive Web Design",  //Full Stack Web Development (React, Node, Express, PostgreSQL)
+    platform: "Free Code Camp",
+    image:require("../images/freecodecamp.png"),
+  },
+  {
+    title: "Full Stack Web Development",  //Full Stack Web Development (React, Node, Express, PostgreSQL)
     platform: "Udemy",
     image:"https://udemy-certificate.s3.amazonaws.com/image/UC-89733e2b-3d01-4352-9d9e-9c72b7c4038b.jpg?v=1734426675000"
   },
   {
     title: "Java",
     platform: "Nptel",
-    image:"https://media.licdn.com/dms/image/v2/D4E2DAQFqr9pqO0dWMg/profile-treasury-image-shrink_800_800/B4EZeLavCKHsAg-/0/1750390733804?e=1754755200&v=beta&t=P3Zduuqqj7Ejk_teVRPYWYhEtbBZK44Bru_pNkvFIwI"
+    image:"https://media.licdn.com/dms/image/v2/D4E2DAQFqr9pqO0dWMg/profile-treasury-image-shrink_800_800/B4EZeLavCKHsAg-/0/1750390733804?e=1755694800&v=beta&t=g69MIuUfc75V8LDt707mqhi_l1ZQZ_qDtKSkmdcv-gw"
   },
 ];
 

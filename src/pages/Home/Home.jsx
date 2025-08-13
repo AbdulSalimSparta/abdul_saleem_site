@@ -13,7 +13,7 @@ function Home() {
         <div className={style.container}>
           <Animate>
           <p className={style.HeroTxt}>
-            Hi, I'm Saleem,a
+            Hi, I'm <span>Saleem,a</span>
             <br />
             <span  className={style.creative}>
               creative

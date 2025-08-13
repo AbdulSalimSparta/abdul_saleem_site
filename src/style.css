@@ -75,7 +75,7 @@ body{
   min-height: 100%;
   overflow-x: hidden;
   background: #1d1d1d;
-  background-attachment: fixed;
+  /* background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-image: radial-gradient(
@@ -83,7 +83,7 @@ body{
   rgba(0, 119, 255, 0.3) 0%,
   rgba(29, 29, 29, 0.1) 100%,
   transparent 100%
-);
+); */
 
  /* background-color: #0e0e11;
   background-image:
@@ -100,15 +100,76 @@ body{
 
 
 
+.circle {
+  position: fixed;
+  width: 1000px; 
+  height: 1000px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(200px); 
+}
 
+.circle.left {
+  left: -450px;
+  bottom: -350px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 132, 255, 0.315) 0%,
+    rgba(0, 132, 255, 0.233) 35%,
+    rgba(0, 132, 255, 0.05) 70%,
+    transparent 100%
+  );
+}
 
+.circle.right {
+  right: -450px;
+  top: -350px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 132, 255, 0.315) 0%,
+    rgba(0, 132, 255, 0.233) 35%,
+    rgba(0, 132, 255, 0.05) 70%,
+    transparent 100%
+  );
+}
 
-
+/* Mobile view */
 @media (max-width: 768px) {
-  body {
-    background-size: 120% 120%; /* Zoom background slightly on mobile */
+  .circle {
+    width: 500px;
+    height: 500px;
+    filter: blur(120px);
+  }
+
+  .circle.left {
+    left: -150px;
+    bottom: -150px;
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 132, 255, 0.445) 0%,
+      rgba(0, 132, 255, 0.18) 40%,
+      rgba(0, 132, 255, 0.05) 75%,
+      transparent 100%
+    );
+  }
+
+  .circle.right {
+    right: -150px;
+    top: -150px;
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 132, 255, 0.445) 0%,
+      rgba(0, 132, 255, 0.18) 40%,
+      rgba(0, 132, 255, 0.05) 75%,
+      transparent 100%
+    );
   }
 }
+
+
+
+
 
 
 

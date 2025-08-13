@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./MainPage";
 import LenisManager from "./components/LenisManager";
 import Details from "./pages/Details/Details";
+import SoftGlow from "./components/SoftGlow";
 
 // import Preloader from "./components/PreLoader/PreLoader";
 // import { useEffect, useState } from "react";
@@ -27,6 +28,7 @@ function AppContent() {
       {/* {location.pathname === "/" && loading && (
         <Preloader onFinish={() => setLoading(false)} />
       )} */}
+      <SoftGlow />
       <div className="app-container">
         <Header />
         <Routes>

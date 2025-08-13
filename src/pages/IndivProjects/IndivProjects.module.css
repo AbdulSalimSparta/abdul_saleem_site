@@ -40,14 +40,16 @@
 
 .projectbImg img {
   border: var(--box-border);
-  width: 740px;
-  height: 470px;
+  width: 80vw;          /* Always 90% of viewport width */
+  height: auto;         /* Maintain aspect ratio */
+  max-height: 90vh;     /* Prevent it from overflowing vertically */
   object-fit: cover;
-  background-size: cover;
-  border-radius: 12px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
+
+
 
 .projectDetailsBox {
   margin: 40px 10vw;
@@ -125,10 +127,10 @@
   }
 
   .projectbImg img {
-    
-    width: 80vw;
-    height: 220px;
-    object-fit: cover;
+    width: 90%;
+    height: auto;
+    max-width: 740px; /* prevent oversizing on large tablets */
+    aspect-ratio: 740 / 470; /* keep same ratio */
   }
 
   .projectDetailsBox {

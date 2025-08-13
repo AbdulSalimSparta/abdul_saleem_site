@@ -5,7 +5,7 @@
   height: max-content;
   width: 80%;
   background: var(--box-background);
-  border-radius: var(--box-border-radius);
+  border-radius: 5px;
   box-shadow: var(--box-box-shadow);
   border: var(--box-border);
 }

@@ -29,7 +29,7 @@ function About() {
   }, []);
 
   return (
-    <div id="about" className={style.abt}>
+    <section id="about" className={style.abt}>
       <Animate mode="words">
       <header className="SectionTitleMain">
         About <span>Me</span>
@@ -80,9 +80,9 @@ function About() {
       </div>
 
       <div className={style.btnbox}>
-        <FlipButton label="Who I am ?" url={"Details"} />
+        <FlipButton label="Want to know More about me ?" url={"Details"} />
       </div>
-    </div>
+    </section>
   );
 }
 

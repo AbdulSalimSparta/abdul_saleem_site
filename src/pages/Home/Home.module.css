@@ -9,7 +9,7 @@
 }
 
 .container {
-  margin: auto 0;
+  margin: auto 10vw;
   display: block;
 }
 
@@ -49,6 +49,7 @@
   width: 100%;
   flex-direction: row;
   height: min-content;
+
 }
 
 .datetimebox,
@@ -59,12 +60,14 @@
 
 .datetimebox {
   justify-content: center;
+  padding-left: 10px;
 }
 
 .socialbox {
   width: 300px;
   display: flex;
   justify-content: end;
+  padding-right: 10px;
 }
 
 .scrolltext {

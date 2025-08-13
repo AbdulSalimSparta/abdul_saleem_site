@@ -3,19 +3,18 @@
   height: 250px;
   width: 80%;
   display: grid;
-
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 1.5fr 1fr;
-  
   background: var(--box-background);
   border-radius: 5px;
   border: var(--box-border);
-
   overflow: visible;
   transition: transform 0.5s ease-in-out;
   perspective: 1000px;
-
   cursor: pointer;
+  animation: scrolling ease;
+  animation-timeline: view();
+  animation-range: entry 10%;
 }
 
 .projectSno {
@@ -25,9 +24,10 @@
   align-self: center;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
-  h3{
-    font-family: "Made";
-  }
+}
+
+.projectSno h3 {
+  font-family: "Made";
 }
 
 .projectTitle {
@@ -53,17 +53,17 @@
 }
 
 .projectTech ul {
-  
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   list-style: none;
 }
 
+/* Image container */
 .projectImg {
   margin-top: 15px;
   width: 80%;
-  height: 80%;
+  aspect-ratio: 450 / 260;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,117 +73,69 @@
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   overflow: visible;
   position: relative;
-  /* To handle the stacking of images */
 }
 
+/* Stacked images (desktop) */
 .projectImg img {
   position: absolute;
   object-fit: cover;
-  height: 260px;
-  width: 450px;
-  transition: 0.5s;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
-  border: 1px solid rgb(218, 218, 218); /* Common transition for all */
-}
-.projectImg:hover img:nth-child(6) {
-  transform: rotate(-6deg);
-  opacity: 1;
-}
-.projectImg:hover img:nth-child(5) {
-  transform: rotate(-5deg);
-  opacity: 0.9;
+  border: var(--box-border);
+  transition: 0.5s;
 }
 
-.projectImg:hover img:nth-child(4) {
-  transform: rotate(-4deg);
-  opacity: 0.8;
-}
+/* Hover stacking effect - only for desktop */
+.projectImg:hover img:nth-child(6) { transform: rotate(-6deg); opacity: 1; }
+.projectImg:hover img:nth-child(5) { transform: rotate(-5deg); opacity: 0.9; }
+.projectImg:hover img:nth-child(4) { transform: rotate(-4deg); opacity: 0.8; }
+.projectImg:hover img:nth-child(3) { transform: rotate(-3deg); opacity: 0.7; }
+.projectImg:hover img:nth-child(2) { transform: rotate(-2deg); opacity: 0.6; }
+.projectImg:hover img:nth-child(1) { transform: rotate(-1deg); opacity: 0.5; }
 
-.projectImg:hover img:nth-child(3) {
-  transform: rotate(-3deg);
-  opacity: 0.7;
-}
+/* Hover effects (desktop) */
+.ProjectItem:hover .projectSno { opacity: 0; }
+.ProjectItem:hover .projectTitle { transform: translateX(-30px); }
+.ProjectItem:hover .projectTech { transform: translateX(-30px); }
+.ProjectItem:hover .projectImg { opacity: 1; transform: scale(1.3); }
 
-.projectImg:hover img:nth-child(2) {
-  transform: rotate(-2deg);
-  opacity: 0.6;
-}
-
-.projectImg:hover img:nth-child(1) {
-  transform: rotate(-1deg);
-  opacity: 0.5;
-}
-
-.ProjectItem:hover .projectImg {
-  opacity: 1;
-  transform: scale(0.8);
-}
-
+/* Timeline */
 .projectTimeline {
   width: 100%;
   align-self: center;
   grid-area: 1 / 4 / 3 / 5;
   text-align: center;
-  h3{
-    font-family: "Made";
-  }
 }
 
-/* Hover Effects */
-.ProjectItem:hover .projectSno {
-  opacity: 0;
+.projectTimeline h3 {
+  font-family: "Made";
 }
 
-.ProjectItem:hover .projectTitle {
-  transform: translateX(-30px);
-}
-
-.ProjectItem:hover .projectTech {
-  transform: translateX(-30px);
-}
-
-.ProjectItem:hover .projectImg {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.ProjectItem {
-  animation: scrolling ease;
-  animation-timeline: view();
-  animation-range: entry 10%;
-}
-
+/* Entry animation */
 @keyframes scrolling {
-  from {
-    opacity: 0;
-    scale: 0.95;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
+  from { opacity: 0; scale: 0.95; }
+  to { opacity: 1; scale: 1; }
 }
 
-@media (max-width: 961px) {
-  .ProjectItem {
+@media (max-width: 1024px) and (min-width: 769px) {
+   .ProjectItem {
+    margin-top: 40px;
     height: max-content;
-    width: 90%;
-    padding: 40px 40px 10px 40px;
-    grid-template-columns: 1fr 1fr; /* 4 columns */
-    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr; /* 4 rows */
-    grid-auto-rows: 0; /* prevents implicit rows */
-    grid-auto-columns: 0;
+    width: 45vw;
+    padding: 0px 25px 10px 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
-      " img    img "
-      " sno    timeline"
-      " title   title"
-      " tech    tech";
+      "img img"
+      "sno timeline"
+      "title title"
+      "tech tech";
   }
 
   .projectSno {
     grid-area: sno;
     text-align: left;
-    align-self: last baseline;
   }
 
   .projectTitle {
@@ -193,47 +145,126 @@
     font-size: 36px;
     margin: 2px;
   }
+
   .projectTech {
     grid-area: tech;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 30px;
   }
+
   .projectTimeline {
     text-align: right;
-    align-self: last baseline;
     grid-area: timeline;
   }
+
+  /* Mobile image */
   .projectImg {
+    
     width: 100%;
-    grid-area: img;
+    height:200px;
+    aspect-ratio: 450 / 260;
+    opacity: 1;
     transform: scale(1);
     transition: none;
-    opacity: 100;
-    height: 30vh;
-    
+    grid-area: img;
   }
 
-  .projectImg > img{
-    width: 80vw;
+  /* Show only first image on mobile */
+  .projectImg img {
+    position: relative;
+    top:-20%;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+     transform: rotate(-6deg);
+  }
+  .projectImg img:not(:last-child) {
+    display: none;
   }
 
-  /* Hover Effects */
-  .ProjectItem:hover .projectSno {
-    opacity: 100;
-  }
-
-  .ProjectItem:hover .projectTitle {
-    transform: translateX(0px);
-  }
-
-  .ProjectItem:hover .projectTech {
-    transform: translateX(0px);
-  }
-
+  /* Disable hover effects on mobile */
+  .ProjectItem:hover .projectSno,
+  .ProjectItem:hover .projectTitle,
+  .ProjectItem:hover .projectTech,
   .ProjectItem:hover .projectImg {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+
+/* Mobile & tablet view */
+@media (max-width: 768px) {
+  .ProjectItem {
+    margin-top: 40px;
+    height: max-content;
+    width: 90vw;
+    padding: 0px 25px 10px 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "img img"
+      "sno timeline"
+      "title title"
+      "tech tech";
+  }
+
+  .projectSno {
+    grid-area: sno;
+    text-align: left;
+  }
+
+  .projectTitle {
+    grid-area: title;
+  }
+  .projectTitle h1 {
+    font-size: 36px;
+    margin: 2px;
+  }
+
+  .projectTech {
+    grid-area: tech;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+
+  .projectTimeline {
+    text-align: right;
+    grid-area: timeline;
+  }
+
+  /* Mobile image */
+  .projectImg {
+    
+    width: 100%;
+    height:200px;
+    aspect-ratio: 450 / 260;
+    opacity: 1;
+    transform: scale(1);
+    transition: none;
+    grid-area: img;
+  }
+
+  /* Show only first image on mobile */
+  .projectImg img {
+    position: relative;
+    top:-20%;
+    width: 100%;
+    height: 100%;
+     transform: rotate(-6deg);
+  }
+  .projectImg img:not(:last-child) {
+    display: none;
+  }
+
+  /* Disable hover effects on mobile */
+  .ProjectItem:hover .projectSno,
+  .ProjectItem:hover .projectTitle,
+  .ProjectItem:hover .projectTech,
+  .ProjectItem:hover .projectImg {
+    transform: none;
     opacity: 1;
   }
 }
