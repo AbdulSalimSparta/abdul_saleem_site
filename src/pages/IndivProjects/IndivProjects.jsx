@@ -64,7 +64,7 @@ function IndivProjects() {
             </ul>
           </div>
           <div className={style.projectLinks}>
-            <FlipButton label="Visit Website" />
+            <FlipButton label="Visit Website" url={project.link}/>
           </div>
         </div>
 

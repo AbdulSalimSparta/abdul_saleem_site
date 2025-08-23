@@ -165,6 +165,13 @@ body{
       transparent 100%
     );
   }
+
+  .SectionTitleMain {
+    font-size: 3.5rem;
+    span{
+      font-size: 3.5rem;
+    }
+  }
 }
 
 
@@ -178,11 +185,11 @@ body{
 .SectionTitleMain {
   font-size: 4.1rem;
   font-weight: 400;
-  margin: 40px 0;
+  margin: 40px 0px;
   letter-spacing: -2px;
   span{
     color: var(--myblue);
-    font-size: 50px;
+    font-size: 4.1rem;
     font-weight: 400;
     margin: 40px 0;
     letter-spacing: -2px;
