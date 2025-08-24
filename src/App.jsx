@@ -34,7 +34,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<MainPage /*startAnimation={!loading}*/ />} />
           <Route path="/projects/:id" element={<IndivProjects />} />
-          <Route path="/Details" element={<Details />} />
+          <Route path="/details" element={<Details />} />
         </Routes>
         <Footer />
       </div>

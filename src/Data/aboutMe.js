@@ -138,7 +138,7 @@ export const achievements = [
   {
     title: "1st & 2nd Place in Codathon by MAMSE, Trichy",
     date: "Nov 2022, Oct 2023",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7172600695492214784/",
+    link: require("../images/mamce.jpeg"),
     image:"https://media.licdn.com/dms/image/v2/D562DAQFaWaC5Z7QNRQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1688214961808?e=1755694800&v=beta&t=dwuDl9LBHF_xj3ZUhjEYolpSu9-YFIWUD0Og67QDTzU"
   }
 ];
@@ -172,7 +172,7 @@ export const courses = [
   {
     title: "Java",
     platform: "Nptel",
-    image:"https://media.licdn.com/dms/image/v2/D4E2DAQFqr9pqO0dWMg/profile-treasury-image-shrink_800_800/B4EZeLavCKHsAg-/0/1750390733804?e=1755694800&v=beta&t=g69MIuUfc75V8LDt707mqhi_l1ZQZ_qDtKSkmdcv-gw"
+    image:require("../images/Nptel.jpeg")
   },
 ];
 

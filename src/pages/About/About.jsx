@@ -80,7 +80,7 @@ function About() {
       </div>
 
       <div className={style.btnbox}>
-        <FlipButton label="Want to know More about me ?" url={"Details"} />
+        <FlipButton label="Want to know More about me ?" url={"details"} />
       </div>
     </section>
   );

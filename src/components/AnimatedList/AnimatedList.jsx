@@ -64,7 +64,7 @@ function AnimatedList(props) {
           ref={iconRef}
           className={style.icon}
           src={props.image}
-          alt="arrow icon"
+          alt={props.value + "image"}
         />
       )}
     </li>
