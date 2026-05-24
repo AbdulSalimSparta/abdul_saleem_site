@@ -1,41 +1,42 @@
 @font-face {
   font-family: "Authentic";
-  src: url("./Font/Authentic/Authentic\ Signature.otf");
+  src: url("./Font/Authentic/Authentic Signature.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Kawur";
-  src: url("./Font/Kawur//Kawur-Aesthetic-BF6860103f547fd.ttf");
+  src: url("./Font/Kawur/Kawur-Aesthetic-BF6860103f547fd.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Grotta";
-  src: url("./Font/Grotta/Grotta-Trial-Bold.ttf");
+  src: url("./Font/Grotta/Grotta-Trial-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Aoi";
-  src: url("./Font/Aoi/AOMono-Regular.otf");
+  src: url("./Font/Aoi/AOMono-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "jetbrain-mono";
-  src: url("./Font/Jet/JetBrainsMono-Regular.ttf");
+  src: url("./Font/Jet/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Phonk";
-  src: url("./Font/Phonk/Phonk\ Regular\ DEMO.otf");
+  src: url("./Font/Phonk/Phonk%20Regular%20DEMO.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Deimos";
-  src: url("./Font/Deimos/Deimos.otf");
+  src: url("./Font/Deimos/Deimos.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Made";
-  src: url("./Font/MadeThin/MADE\ Outer\ Sans\ Thin\ PERSONAL\ USE.otf");
+  src: url("./Font/MadeThin/MADE%20Outer%20Sans%20Thin%20PERSONAL%20USE.otf")
+    format("opentype");
 }
 
 :root {

@@ -112,34 +112,40 @@ export const education = [
 
 export const achievements = [
   {
+    title: "Overall Performer in Syncfusion training",
+    date: "Jan-Feb 2026",
+    link: "https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_webdevelopment-fullstack-syncfusion-activity-7448531215881515008-823c?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjYTzIBZdEMwq47kOIonqOB_OcqlwXNQmE",
+    image: require("../images/sync.jpg"),
+  },
+  {
     title: "Finalist of PALS InNowah Hackathon 22-23!",
     date: "Mar 2023",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7045617314284646400/",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQHS9rUb_E24_g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1679806067442?e=1756944000&v=beta&t=ODCYLU1uz5F4QRmG8ikHo-QFBTF_Yy1JXHvhtjBfLXQ"
+    image: require("../images/pals.jpg"),
   },
   {
     title: "Finalist of 13th Entrepreneurship Summit Across India (F2C-Smart)",
     date: "Oct 2024",
     link: "https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_f2csmart-iiscbangalore-startupsuccess-activity-7253972350914682880-Wskv?utm_source=share&utm_medium=member_desktop",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQHuDc_ZPgy-NQ/feedshare-shrink_800/feedshare-shrink_800/0/1729481045384?e=1756944000&v=beta&t=sQHmY7SknPYRZz4oti5Sm_qQWvQEZBZXR8RWsBRb-Ko"
+    image: require("../images/entreprenurship.jpg"),
   },
   {
     title: "Finalist of Rural Agri Hackathon Challenge 24 by IITM Build Club (Banana Peeler)",
     date: "Apr 2024",
     link: "https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_ruralagrichallenge-iitmic-agriculture-activity-7187633563591237633-DFWt?utm_source=share&utm_medium=member_desktop",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQEiRBuXH4_ciw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1713665366804?e=1756944000&v=beta&t=alkWNv9_3KwLEdsLWT_jrAjb4eN2uzd580Wkh2aUiMI"
+    image: require("../images/rural.jpg"),
   },
   {
     title: "Top Performer in the PALS ECU Capture the Flag Cyber Edge 2024",
     date: "Mar 2024",
     link:"https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_pals-ecu-cybersecurity-activity-7172600695492214784-d1NO?utm_source=share&utm_medium=member_desktop&rcm=ACoAADjYTzIBZdEMwq47kOIonqOB_OcqlwXNQmE",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQGF2sqc6ZeYRw/feedshare-shrink_800/feedshare-shrink_800/0/1710081264746?e=1756944000&v=beta&t=ATX-8rlQUZnnJocl-3gu7UdxtlWp0TvkTVMxX-tcmMI"
+    image: require("../images/ctf.jpg"),
   },
   {
     title: "1st & 2nd Place in Codathon by MAMSE, Trichy",
     date: "Nov 2022, Oct 2023",
     link: require("../images/mamce.jpeg"),
-    image:"https://media.licdn.com/dms/image/v2/D562DAQFaWaC5Z7QNRQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1688214961808?e=1755694800&v=beta&t=dwuDl9LBHF_xj3ZUhjEYolpSu9-YFIWUD0Og67QDTzU"
+    image: require("../images/codethan.jpg"),
   }
 ];
 
@@ -148,13 +154,13 @@ export const awards = [
     title: "Best Outgoing Student of the College Award (Batch 2021-2025)",
     date: "Apr 2025",
     link: "https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_gratitude-achieversday-collegelife-activity-7328083749097615360-QY6u/?utm_source=share&utm_medium=member_desktop",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQFRLcp8aLVQtA/feedshare-shrink_2048_1536/B56ZbKVVKoGoAo-/0/1747151312711?e=1756944000&v=beta&t=Y3GQFBJNhqmzUbDIWEppfNMiKQoh_h1pi0SBd9oclnI"
+    image: require("../images/collge_award.jpg"),
   },
   {
     title: "Best Outgoing Student of the CSE Department Award (Batch 2021-2025)",
     date: "Apr 2025",
     link: "https://www.linkedin.com/posts/abdul-saleem-t-a-982485227_gratitude-achieversday-collegelife-activity-7328083749097615360-QY6u/?utm_source=share&utm_medium=member_desktop",
-    image:"https://media.licdn.com/dms/image/v2/D5622AQHXiysqOBwxvQ/feedshare-shrink_2048_1536/B56ZbKVVKlGoAs-/0/1747151312526?e=1756944000&v=beta&t=Z54Kyl12A675BHu2NLZIutyqsugw_AgkocYuHfAljNg"
+    image: require("../images/dept_award.jpg"),
   }
 ];
 
