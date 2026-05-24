@@ -1,4 +1,4 @@
-import { courses, awards, achievements, internships } from "../../Data/aboutMe";
+import { courses, awards, achievements} from "../../Data/aboutMe";
 import style from "./Details.module.css";
 import AnimatedList from "../../components/AnimatedList/AnimatedList";
 import TitleBox from "../../components/TitleBox/TitleBox";
@@ -53,7 +53,7 @@ useGSAP(() => {
 
       <div className={style.mainContent}>
         <div id="salimimages" className={style.imageCol}>
-          <img src={require("../../images/IMG_1546_e.jpg")}/>
+          <img src={require("../../images/IMG_1546_e.jpg")} alt="prof"/>
         </div>
         <div className={style.contentCol}>
           <p>

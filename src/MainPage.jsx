@@ -4,8 +4,8 @@ import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
-import Testimonals from "./pages/Testimonals/Testimonals";
-import Details from './pages/Details/Details';
+// import Testimonals from "./pages/Testimonals/Testimonals";
+// import Details from './pages/Details/Details';
 // import Testimonals from '../Testimonals/Testimonals'; // add if needed
 
 function MainPage() {

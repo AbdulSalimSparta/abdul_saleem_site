@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bc08ca35.css",
+    "main.js": "/static/js/main.0bd28064.js",
+    "static/media/SchedulingAPP.png": "/static/media/SchedulingAPP.337620cf6f771e381210.png",
+    "static/media/IMG_1546_e.jpg": "/static/media/IMG_1546_e.c0380cd721f013870ff2.jpg",
+    "static/media/abdul_saleem.jpg": "/static/media/abdul_saleem.961d0a1f252555c0cf1d.jpg",
+    "static/media/F2C.png": "/static/media/F2C.7ab24d7993585db4787a.png",
+    "static/media/JetBrainsMono-Regular.ttf": "/static/media/JetBrainsMono-Regular.93b40005892466035ab0.ttf",
+    "static/media/Phonk Regular DEMO.otf": "/static/media/Phonk Regular DEMO.411157e17c1a43fdd53f.otf",
+    "static/media/portfolio.png": "/static/media/portfolio.ebdb59822ee641fe1b29.png",
+    "static/media/sync.jpg": "/static/media/sync.95578d864af76d5de086.jpg",
+    "static/media/studiodesk.png": "/static/media/studiodesk.17577bb15502039a67bf.png",
+    "static/media/freecodecamp.png": "/static/media/freecodecamp.7a26d6e6752c03f476f2.png",
+    "static/media/Authentic Signature.otf": "/static/media/Authentic Signature.e24212997b07a3854d60.otf",
+    "static/media/dept_award.jpg": "/static/media/dept_award.88ced4bca220696f933f.jpg",
+    "static/media/collge_award.jpg": "/static/media/collge_award.eb3caff866239cfb2c95.jpg",
+    "static/media/MADE Outer Sans Thin PERSONAL USE.otf": "/static/media/MADE Outer Sans Thin PERSONAL USE.41ffbbb664b39caf1fe4.otf",
+    "static/media/ctf.jpg": "/static/media/ctf.90480576f2a0b9c5f3e4.jpg",
+    "static/media/rural.jpg": "/static/media/rural.f828f4b04d572ce5e44a.jpg",
+    "static/media/codethan.jpg": "/static/media/codethan.31480008bd9e8781c9dd.jpg",
+    "static/media/mamce.jpeg": "/static/media/mamce.31480008bd9e8781c9dd.jpeg",
+    "static/media/pals.jpg": "/static/media/pals.8b95d8deec4e5dfefd5f.jpg",
+    "static/media/saleemcv.pdf": "/static/media/saleemcv.ba437568b29974de4ed3.pdf",
+    "static/media/entreprenurship.jpg": "/static/media/entreprenurship.3738752845884a7a3205.jpg",
+    "static/media/Nptel.jpeg": "/static/media/Nptel.c9308d4a1f370e62cf8a.jpeg",
+    "static/media/Kawur-Aesthetic-BF6860103f547fd.ttf": "/static/media/Kawur-Aesthetic-BF6860103f547fd.f94d8aa15e077f9683b1.ttf",
+    "static/media/Deimos.otf": "/static/media/Deimos.2fb3c06809e0d2b0bc73.otf",
+    "static/media/AOMono-Regular.otf": "/static/media/AOMono-Regular.69afd12194210645fb4d.otf",
+    "static/media/Grotta-Trial-Bold.ttf": "/static/media/Grotta-Trial-Bold.e4ba6e41c96ab2e7f554.ttf",
+    "index.html": "/index.html",
+    "main.bc08ca35.css.map": "/static/css/main.bc08ca35.css.map",
+    "main.0bd28064.js.map": "/static/js/main.0bd28064.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc08ca35.css",
+    "static/js/main.0bd28064.js"
+  ]
+}
