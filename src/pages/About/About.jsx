@@ -39,7 +39,7 @@ function About() {
       <div className={style.abtmain}>
         {/* Left Details */}
         <div className={style.details}>
-          <Indicator message="Seeking full-time roles" />
+          <Indicator message="Working as a Software Engineer" />
           <Animate>
             <h1 className={style.Role}>A Web Developer based in India</h1>
           </Animate>
